@@ -2,7 +2,8 @@ export const nav = [
   { label: "PROJECT STILLWATER", href: "#status" },
   { label: "ABOUT", href: "#about" },
   { label: "ARCHIVE", href: "#archive" },
-  { label: "ENTER SYSTEM", href: "#participation" },
+  { label: "REGISTER", href: "/register" },
+  { label: "ENTER SYSTEM", href: "/login" },
 ];
 export const statusRows: [string, string][] = [
   ["PROJECT", "STILLWATER"], ["ESTABLISHED", "2008"], ["LAST ACTIVE", "2011"], ["STATUS", "TERMINATED"],
