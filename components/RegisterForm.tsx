@@ -21,7 +21,7 @@ export default function RegisterForm() {
     try {
       const res = await fetch("/api/register", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
       const data = await res.json();
-      if (data.ok) { router.push("/registered"); return; }
+      if (data.ok) { router.push(data.confirmed ? "/registered?confirmed=1" : "/registered"); return; }
       setErrors(data.fields || {}); setFormError(data.error || "Registration failed.");
     } catch { setFormError("Could not reach the system. Check your connection."); }
     setBusy(false);
